@@ -13,16 +13,18 @@
        <div class="container">
        <h3>Edição de linguagem</h3>        
        <form  action="atualizarlenguage.jsp" method="post">
-        <table class="table  table-striped">        
-              <tr>
+        <table class="table  table-striped">
+            <tr>
                 <td>id da linguagem:</td>
                     <td><input class="form-control" type="text" name="id"
                                value="<%= lenguage.getId() %>" readonly="readonly" />
                     </td>
+                </tr>
+              <tr>
                     
                     <td>Nome:</td>
                     <td><input class="form-control" type="text" name="name"
-                               value="<%= lenguage.getName() %>" readonly="readonly" />
+                               value="<%= lenguage.getName() %>" />
                     </td>
                 </tr>
                 <tr>
