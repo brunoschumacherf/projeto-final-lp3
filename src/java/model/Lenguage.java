@@ -6,7 +6,7 @@ package model;
 
 public class Lenguage {
     int years, id;
-    String  name, documentation, image, description;
+    String  name, documentation, image, description, creator, urlcreator;
     
     public int getId() {
         return id;
@@ -55,5 +55,21 @@ public class Lenguage {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public void setCreador(String creador) {
+        this.creator = creador;
+    }
+
+    public String getCreador() {
+        return creator;
+    }
+
+    public void setUrlCreador(String urlCreador) {
+        this.urlcreator = urlCreador;
+    }
+
+    public String getUrlCreador() {
+        return urlcreator;
     }
 }

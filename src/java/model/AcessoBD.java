@@ -30,6 +30,8 @@ public class AcessoBD {
                 l.setDescription(rs.getString("description"));
                 l.setDocumentation(rs.getString("documentation"));
                 l.setImage(rs.getString("image"));
+                l.setCreador(rs.getString("creator"));
+                l.setUrlCreador(rs.getString("urlcreator"));
                 lista.add(l);
             }
             con.close();
@@ -63,6 +65,8 @@ public class AcessoBD {
             l.setDescription(rs.getString("description"));
             l.setDocumentation(rs.getString("documentation"));
             l.setImage(rs.getString("image"));
+            l.setCreador(rs.getString("creator"));
+            l.setUrlCreador(rs.getString("urlcreator"));
           }
           con.close();
             return l;
@@ -75,13 +79,15 @@ public class AcessoBD {
 
     public boolean insertLenguage(Lenguage l){
       try {
-          String sql = "insert into lenguages (name, years, description, documentation, image) values (?, ?, ?, ?, ?)";
+          String sql = "insert into lenguages (name, years, description, documentation, image, creator, urlcreator) values (?, ?, ?, ?, ?, ?, ?)";
           PreparedStatement ps = con.prepareStatement(sql);
           ps.setString(1, l.name);
           ps.setInt(2, l.years);
           ps.setString(3, l.description);
           ps.setString(4, l.documentation);
           ps.setString(5, l.image);
+          ps.setString(6, l.creator);
+          ps.setString(7, l.urlcreator);
           ps.executeUpdate();
           ps.close();
           con.close();
@@ -94,14 +100,16 @@ public class AcessoBD {
 
     public boolean alterarLenguage(Lenguage l){
       try {
-          String sql = "update lenguages set name = ?, years = ?, description = ?, documentation = ?, image = ? where reference = ?";
+          String sql = "update lenguages set name = ?, years = ?, description = ?, documentation = ?, image = ?, creator = ?, urlcreator = ? where reference = ?";
           PreparedStatement ps = con.prepareStatement(sql);
           ps.setString(1, l.name);
           ps.setInt(2, l.years);
           ps.setString(3, l.description);
           ps.setString(4, l.documentation);
           ps.setString(5, l.image);
-          ps.setInt(6, l.id);
+          ps.setString(6, l.creator);
+          ps.setString(7, l.urlcreator);
+          ps.setInt(8, l.id);
           ps.executeUpdate();
           ps.close();
           con.close();

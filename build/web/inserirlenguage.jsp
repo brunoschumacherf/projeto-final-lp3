@@ -10,10 +10,12 @@
     lenguage.setImage(request.getParameter("image"));
     lenguage.setDocumentation(request.getParameter("documentation"));
     lenguage.setDescription(request.getParameter("description"));
+    lenguage.setCreador(request.getParameter("creator"));
+    lenguage.setUrlCreador(request.getParameter("urlCreator"));
     bd.insertLenguage(lenguage);
 %> 
 
 <script>
-    window.location.href = "/crud_lenguages";
+    window.location.href = "index.jsp";
 </script>
 

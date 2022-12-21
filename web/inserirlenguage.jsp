@@ -10,6 +10,8 @@
     lenguage.setImage(request.getParameter("image"));
     lenguage.setDocumentation(request.getParameter("documentation"));
     lenguage.setDescription(request.getParameter("description"));
+    lenguage.setCreator(request.getParameter("creator"));
+    lenguage.setUrlCreator(request.getParameter("urlCreator"));
     bd.insertLenguage(lenguage);
 %> 
 

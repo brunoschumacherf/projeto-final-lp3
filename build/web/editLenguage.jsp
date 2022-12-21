@@ -55,6 +55,24 @@
                                />
                     </td>
                 </tr>
+
+                                <tr>
+                    <td>Nome do criador</td>
+                    <td>
+                        <input class="form-control" type="text" name="creator"
+                               value="<%= lenguage.getCreador() %>"
+                               />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>URL Da imagem do Criador</td>
+                    <td>
+                        <input class="form-control" type="text" name="urlCreator"
+                               value="<%= lenguage.getUrlCreador() %>"
+                               />
+                    </td>
+                </tr>
                 <tr>
                     <td colspan="2">
                         <input class="btn btn-primary" type="submit" name="btAtualizar" value="Atualizar" />

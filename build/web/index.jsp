@@ -15,6 +15,7 @@
     <tr>
         <th>Nome</th>
         <th>Ano</th>
+        <th>Criador</th>
         <th>Editar</th>
         <th>Excluir</th>
         <th>Detalhes</th>
@@ -26,6 +27,7 @@
     <tr>
         <td><%=len.getName()%></td>
         <td><%=len.getYears()%></td>
+        <td><%=len.getCreador()%></td>
         <td><a class="btn btn-primary" href="editLenguage.jsp?id=<%=len.getId()%>">Editar</a></td>
         <td><a class="btn btn-danger" href="deleteLenguage.jsp?id=<%=len.getId()%>">Excluir</a></td>
         <td><a class="btn btn-info" href="detalhesLenguage.jsp?id=<%=len.getId()%>">Detalhes</a></td>

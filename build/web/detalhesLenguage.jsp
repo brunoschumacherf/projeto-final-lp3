@@ -9,7 +9,9 @@
         lenguage = bd.obterLenguage(id);
     %>
 <div class="container-fluid">
-    <h3 class="display-3">Detalhes da linguagem <%= lenguage.getName()  %> (<%= lenguage.getYears()  %>)</h3>
+      <h3 class="display-3">Detalhes da linguagem <%= lenguage.getName()  %> (<%= lenguage.getYears()  %>)</h3>
+    <img src="<%=lenguage.getUrlCreador()%>" alt="..." class="img-thumbnail">
+    <p><%=lenguage.getCreador()%></p>
     <img src="<%= lenguage.getImage() %>" class="rounded mx-auto d-block" alt="...">
 
     <h4> Descrição</h4>

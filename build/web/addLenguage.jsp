@@ -22,13 +22,22 @@
 <td>url da documentação</td>
 <td><input class="form-control" type="text" name="documentation" /></td>
 </tr>
+<tr>
 <td>url da image</td>
 <td><input class="form-control" type="text" name="image" /></td>
 </tr>
 <tr>
+<td>Criador</td>
+<td><input class="form-control" type="text" name="creator" /></td>
+</tr>
+<tr>
+<td>url da imagem do criador</td>
+<td><input class="form-control" type="text" name="urlCreator" /></td>
+</tr>
+<tr>
     <td colspan="2">
         <input class="btn btn-primary" type="submit" name="btAtualizar" value="Incluir" />
-        <a class="btn btn-link" href="/crud_lenguages">Voltar </a>
+        <a class="btn btn-link" href="index.jsp">Voltar </a>
     </td>
 </tr>
 </table>
